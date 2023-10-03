@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    font-family: monospace;
+    color: #fff;
+    font-size: 16px;
+    display: grid;
+    place-items: center;
+}
+
+
+body h1{
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: center;
+    background-color: #fff;
+    color: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+
+body h4{
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    color: #000;
+}
+
+
+
+.post-page-contaniner{
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.posts-container{
+    width: 600px;
+    max-width: 600px;
+    display: grid;
+    place-items: center;
+}
+
+.posts-container .post {
+    background-color: orchid;
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+.posts-container .post p{
+    width: 100%;
+    font-size: 1rem;
+}
+
+.button-container{
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.button-container button{
+    font-size: 1rem;
+    padding: 1rem 1rem;
+    outline: none;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.button-container button a{
+    text-decoration: none;
+    color: #000;
+}
+
+
+.new-post-container{
+    width: 400px;
+    max-width: 400px;
+    background-color: orchid;
+}
+
+.new-post-container form{
+    width: 100%;
+}
+.new-post-container form textarea{
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    outline: none;
+}

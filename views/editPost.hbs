@@ -1,0 +1,9 @@
+
+<div class="new-post-container">
+    <form action="/post/api/v1/update-post/{{foundPost._id}}" method="post">
+        <textarea name="updatedText"  id="" cols="30" rows="10">{{foundPost.text}}</textarea>
+        <div class="button-container">
+            <button type="submit">Update post</button>
+        </div>
+    </form>
+</div>
