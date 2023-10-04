@@ -18,6 +18,7 @@ body{
     font-size: 16px;
     display: grid;
     place-items: center;
+    padding: 4rem 0;
 }
 
 
@@ -46,6 +47,20 @@ body h4{
     color: #000;
 }
 
+.home-page-container{
+    width:100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+}
+
+
+.home-page-container h1{
+    width: 40%;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 500;
+}
 
 
 .post-page-contaniner{
@@ -55,22 +70,26 @@ body h4{
 }
 
 .posts-container{
-    width: 600px;
-    max-width: 600px;
+    width: 450px;
+    max-width: 450px;
     display: grid;
     place-items: center;
+    gap: 1rem;
 }
 
 .posts-container .post {
-    background-color: orchid;
+    background-color: #eff7f2;
     width: 100%;
     padding: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 4px ;
 }
 
 .posts-container .post p{
     width: 100%;
     font-size: 1rem;
+    color: #000;
 }
 
 .button-container{
@@ -81,12 +100,14 @@ body h4{
     gap: 1rem;
 }
 .button-container button{
+    width: 100px;
     font-size: 1rem;
-    padding: 1rem 1rem;
+    padding: 0.54rem 0.54rem;
     outline: none;
     border: none;
     border-radius: 1rem;
     cursor: pointer;
+    background-color: rgb(71, 71, 241);
 }
 
 .button-container button a{
@@ -98,7 +119,7 @@ body h4{
 .new-post-container{
     width: 400px;
     max-width: 400px;
-    background-color: orchid;
+    background-color: #eff7f2;
 }
 
 .new-post-container form{

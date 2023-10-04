@@ -12,7 +12,7 @@ class Post{
     }
 
 
-    
+
     static create(req, res){
         res.status(200).render('createPost');
     }
@@ -25,7 +25,7 @@ class Post{
                 await post.create({
                     text: text.trim().toLowerCase()
                 })
-                Post.index(req, res)
+                res.status(301).redirect('/post/api/v1/read-posts');
             }else{
                 res.status(400).json({message: "Post Input Cannot Be empty...."})
             }
@@ -58,7 +58,7 @@ class Post{
                 const foundPost = await post.findOne({_id: id});
                 foundPost.text = updatedText;
                 await foundPost.save();
-                Post.index(req, res);
+                res.status(301).redirect('/post/api/v1/read-posts');
             }else{
                 res.status(400).json({message: "Post Input Cannot Be empty...."})
             }
@@ -73,7 +73,7 @@ class Post{
             const {id}= req.params;
             if(id !== null || id !== "" ){
                 await post.findByIdAndDelete({_id: id});
-                Post.index(req, res);
+                res.status(301).redirect('/post/api/v1/read-posts');
             }else{
                 res.status(400).json({message: "post id cannot be empty or null...."})
             }
