@@ -5,6 +5,7 @@ const dotenv=require('dotenv');
 dotenv.config()
 const postRoutes= require('./routes/postRoutes')
 const homeRoutes= require('./routes/homeRoutes')
+const userRoutes= require('./routes/userRoutes')
 
 const app=express()
 
@@ -23,6 +24,7 @@ app.set('view engine', 'hbs');
 
 app.use('/', homeRoutes)
 app.use('/post', postRoutes);
+app.use('/user', userRoutes);
 
 
 
