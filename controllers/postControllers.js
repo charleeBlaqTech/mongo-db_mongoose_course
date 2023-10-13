@@ -35,6 +35,25 @@ class Post{
         }
     }
 
+    
+    static async show(req,res){
+        try {
+            const {id} = req.params;
+
+            if(id !== null || id !== "" ){
+                const singlePost= await post.findOne({
+                    _id:id
+                }).populate("author")
+                res.status(200).render('showPost', {singlePost});
+            }else{
+                res.status(400).json({message: "post not found...."})
+            }
+           
+        } catch (error) {
+            res.status(400).json({message: error.message});
+        }
+    }
+
     static async update(req, res){
         try {
             const {id}= req.params;

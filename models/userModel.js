@@ -6,13 +6,17 @@ const userSchema=new mongoose.Schema({
         type: String,
     },
     email:{
-        type: String
+        type: String,
+        unique: true
     },
     userType:{
         type: String,
-        default: creator
+        default: "creator"
     },
-    posts:[],
+    posts:[{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "post"
+    }],
     created:{
         type: Date,
         default: Date.now()

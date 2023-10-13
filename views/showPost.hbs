@@ -1,0 +1,11 @@
+<div class="post-show-container">
+    <div class="post">
+        <p>Author: {{singlePost.author.name}}</p>
+        <p>{{singlePost.text}}</p>
+        <div class="button-container">
+            <button><a href="/post/api/v1/update-post/{{singlePost._id}}">Edit post</a></button>
+            <button><a href="/post/api/v1/delete-post/{{singlePost._id}}">Delete post</a></button>
+            <button><a href="/post/api/v1/create-post">New post</a></button>
+        </div>  
+    </div>
+</div>
